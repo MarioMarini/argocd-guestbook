@@ -18,3 +18,10 @@ spec:
         name: guestbook-ui
         ports:
         - containerPort: 80
+volumes:
+- configMap:
+    items:
+    - key: log_level
+      path: log_level.conf
+    name: log-config
+  name: config-vol
